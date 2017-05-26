@@ -10,10 +10,10 @@
 	</head>
 	<body>
 	<div class="container" style="padding:0px;">
-	<div class="row">
-	<div class="col-md-12" id="main" style="height:800px;"/>
+		<div class="row">
+			<div class="col-md-12" id="main" style="height:800px;"></div>
+	    </div>
 	</div>
-</div>
 
 <script type="text/javascript">
 /*为图表生成按钮*/
@@ -75,17 +75,17 @@ function showProvince(data){
                     // animationEasingUpdate: 'quinticInOut'
                     label: {
            				normal:{
-           				show:false,
+           				show:false
            				},
                 		emphasis: {
-                    	show: true,
+                    	show: true
                 			}
-            			},
+            			}
                 },
         series:[
-    	],
+    	]
         });
-        cityViewOption = chart.getOption()
+        cityViewOption = chart.getOption();
         window.onresize = chart.resize;
     });
 }
@@ -103,7 +103,7 @@ function showCity(data){
     			 },
 		geo:{		
                 	map: data,
-                	silent:false,/*无鼠标等事件*/
+                	silent:false /*无鼠标等事件*/
                 	/*animation: true*/
                     // animationDurationUpdate: 1000,
                     // animationEasingUpdate: 'quinticInOut'
@@ -111,7 +111,7 @@ function showCity(data){
             },
         series:[
     				
-    			],
+    			]
         });
         window.onresize = chart.resize;
     });
@@ -124,7 +124,7 @@ option = {
    	title:{
 	    	text:"基于Echarts的地图钻取(精确到县级)",
 	    	left:'center',
-	    	top:15,
+	    	top:15
 	      },
    tooltip: {
         trigger: 'item',
@@ -132,13 +132,13 @@ option = {
     },
     geo: /* 地图基础坐标系 */
         {
-            map:'china',
+            map:'china'
             /* roam:'move', *//* 鼠标缩放和平移漫游 */
         },
         
     
     series:[
-    ],
+    ]
 	};
 /*结束基础首选项*/
 	
@@ -205,7 +205,7 @@ function exitBView(){
        					beIcn(chart, function(params) {
 						exitProvice();
 							});
-		})
+		});
 		window.onresize = chart.resize;
 		bindClick();
 }
